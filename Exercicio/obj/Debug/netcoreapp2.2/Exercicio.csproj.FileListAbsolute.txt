@@ -1,0 +1,11 @@
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\bin\Debug\netcoreapp2.2\Exercicio.deps.json
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\bin\Debug\netcoreapp2.2\Exercicio.runtimeconfig.json
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\bin\Debug\netcoreapp2.2\Exercicio.runtimeconfig.dev.json
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\bin\Debug\netcoreapp2.2\Exercicio.dll
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\bin\Debug\netcoreapp2.2\Exercicio.pdb
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\obj\Debug\netcoreapp2.2\Exercicio.csprojAssemblyReference.cache
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\obj\Debug\netcoreapp2.2\Exercicio.csproj.CoreCompileInputs.cache
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\obj\Debug\netcoreapp2.2\Exercicio.AssemblyInfoInputs.cache
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\obj\Debug\netcoreapp2.2\Exercicio.AssemblyInfo.cs
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\obj\Debug\netcoreapp2.2\Exercicio.dll
+D:\Thiago\01-Fiap.UI.-HelloWord\Exercicio\obj\Debug\netcoreapp2.2\Exercicio.pdb

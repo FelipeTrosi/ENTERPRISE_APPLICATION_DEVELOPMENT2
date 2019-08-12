@@ -1,0 +1,11 @@
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\bin\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.deps.json
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\bin\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.runtimeconfig.json
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\bin\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.runtimeconfig.dev.json
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\bin\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.dll
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\bin\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.pdb
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\obj\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.csprojAssemblyReference.cache
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\obj\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.csproj.CoreCompileInputs.cache
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\obj\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.AssemblyInfoInputs.cache
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\obj\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.AssemblyInfo.cs
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\obj\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.dll
+D:\Thiago\01-Fiap.UI.-HelloWord\01-Fiap.UI.-HelloWord\obj\Debug\netcoreapp2.2\01-Fiap.UI.-HelloWord.pdb
