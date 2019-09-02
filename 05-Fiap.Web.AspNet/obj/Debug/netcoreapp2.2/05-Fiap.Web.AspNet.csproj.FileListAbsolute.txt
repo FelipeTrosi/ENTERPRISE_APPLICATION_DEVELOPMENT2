@@ -30,3 +30,4 @@ D:\Thuago\05-Fiap.Web.AspNet\05-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\05-Fiap.
 D:\Thuago\05-Fiap.Web.AspNet\05-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\05-Fiap.Web.AspNet.csproj.CopyComplete
 D:\Thuago\05-Fiap.Web.AspNet\05-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Serie\Cadastrar.g.cshtml.cs
 D:\Thuago\05-Fiap.Web.AspNet\05-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Serie\Listar.g.cshtml.cs
+D:\Thuago\05-Fiap.Web.AspNet\05-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Serie\Editar.g.cshtml.cs

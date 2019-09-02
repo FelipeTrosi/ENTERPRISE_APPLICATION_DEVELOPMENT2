@@ -1,4 +1,5 @@
 ﻿@model IList<Serie>
+
 @{
     ViewData["Title"] = "Listar";
 }
@@ -21,6 +22,7 @@
             <td>@item.Tipo</td>
             <td>@item.DataLancamento.ToShortDateString()</td>
             <td>@item.Temporadas</td>
+            <td><a asp-action="editar" asp-route-id="@item.SerieId">Editar</a></td>
         </tr>
     }
 </table>
