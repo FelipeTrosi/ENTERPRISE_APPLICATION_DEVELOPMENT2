@@ -10,7 +10,7 @@ namespace _05_Fiap.Web.AspNet.Persistence
     public class BancoContext : DbContext
     {
         public DbSet<Serie> Series { get; set; }
-
+        public DbSet<Diretor> Diretores { get; set; }
         //Construtor
         public BancoContext(DbContextOptions o) : base (o)
         {

@@ -14,13 +14,24 @@ namespace _05_Fiap.Web.AspNet.Controllers
         //tipo o "em", vai acessar as coisas no banco
         private BancoContext _context;
 
-      
+
         //O Context será instanciado pelo framework
         public SerieController(BancoContext context)
         {
             _context = context;
         }
 
+        //EXCLUIR -------------------------------------------------------
+        [HttpPost]
+        public IActionResult Excluir(int id)        {
+            var serie = _context.Series.Find(id);
+            _context.Remove(serie);
+            _context.SaveChanges();
+            TempData["msg"] = "Excluido !!";
+            return RedirectToAction("Listar");
+        }
+
+        //EDITAR ---------------------------------------------------------
         [HttpPost]
         public IActionResult Editar(Serie serie)
         {
@@ -40,12 +51,14 @@ namespace _05_Fiap.Web.AspNet.Controllers
             return View(serie);
         }
 
+        //LISTAR --------------------------------------------------------
         [HttpGet]
         public IActionResult Listar()
         {
             return View(_context.Series.ToList());
         }
 
+        //CADASTRAR -----------------------------------------------------
         [HttpPost]
         public IActionResult Cadastrar(Serie serie)
         {
