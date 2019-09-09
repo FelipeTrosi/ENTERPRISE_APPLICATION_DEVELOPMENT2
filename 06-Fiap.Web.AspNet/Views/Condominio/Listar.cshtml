@@ -1,0 +1,27 @@
+﻿@model  List<Condominio>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h1>Listar</h1>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Blocos</th>
+        <th>Tipo</th>
+        <th>Ativo</th>
+    </tr>
+    @foreach (var itens in Model)
+    {
+     <tr>
+        <td>@itens.CondominioId</td>
+        <td>@itens.Nome</td>
+        <td>@itens.Blocos</td>
+        <td>@itens.Tipo</td>
+        <td>@itens.Ativo</td>
+     </tr>
+    }
+
+</table>
