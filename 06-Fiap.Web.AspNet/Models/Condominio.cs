@@ -11,7 +11,7 @@ namespace _06_Fiap.Web.AspNet.Models
     [Table("T_ASP_CONDOMINIO")]
     public class Condominio
     {
-        [Id, HiddenInput]
+        [Column("Id"), HiddenInput]
         public int CondominioId { get; set; }
         [Required, MaxLength(50)]
         public string Nome { get; set; }
