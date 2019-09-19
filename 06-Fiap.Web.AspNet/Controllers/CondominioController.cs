@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using _06_Fiap.Web.AspNet.Models;
 using _06_Fiap.Web.AspNet.Persistence;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace _06_Fiap.Web.AspNet.Controllers
 {
@@ -26,7 +27,8 @@ namespace _06_Fiap.Web.AspNet.Controllers
         [HttpGet]
         public IActionResult Listar()
         {
-            return View(_context.Condominios.ToList());
+            //include -> inclui o relacionamento na pesquisa
+            return View(_context.Condominios.Include(c => c.Sindico).ToList());
         }
 
 
@@ -51,7 +53,9 @@ namespace _06_Fiap.Web.AspNet.Controllers
         [HttpGet]
         public IActionResult Editar(int id)
         {
-            var condominio = _context.Condominios.Find(id);
+            //include -> inclui o relacionamento na pesquisa
+            var condominio = _context.Condominios.Include(c => c.Sindico)
+                .Where(c => c.CondominioId == id).FirstOrDefault();
             return View(condominio);
         }
 
@@ -68,6 +72,7 @@ namespace _06_Fiap.Web.AspNet.Controllers
         [HttpPost]
         public IActionResult Excluir(int id)
         {
+            //include -> inclui o relacionamento na pesquisa
             var condominio = _context.Condominios.Find(id);
             _context.Condominios.Remove(condominio);
             _context.SaveChanges();
@@ -79,8 +84,10 @@ namespace _06_Fiap.Web.AspNet.Controllers
         [HttpGet]
         public IActionResult Pesquisar(string termoPesquisa)
         {
+            //include -> inclui o relacionamento na pesquisa
             var lista = _context.Condominios.Where(
-                churros => churros.Nome.Contains(termoPesquisa)).ToList();
+                churros => churros.Nome.Contains(termoPesquisa))
+                .Include(c => c.Sindico).ToList();
             return View("Listar",lista);
         }    
 

@@ -1,0 +1,26 @@
+﻿@model Imovel
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h1>Cadastrar</h1>
+
+<mensagem texto="@TempData["mensagem"]"></mensagem>
+
+<form asp-action="Cadastrar">
+    <div class="form-group">
+        <label asp-for="Numero"></label>
+        <input asp-for="Numero" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="AreaUtil"></label>
+        <input asp-for="AreaUtil" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CondominioId"></label>
+        <select asp-for="CondominioId" asp-items="@ViewBag.condominios">
+            <option>Selecione</option>
+        </select>
+    <div>
+    <botao texto="Cadastrar" />
+</form>

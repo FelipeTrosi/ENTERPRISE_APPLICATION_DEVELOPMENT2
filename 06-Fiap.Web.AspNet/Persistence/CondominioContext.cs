@@ -11,7 +11,30 @@ namespace _06_Fiap.Web.AspNet.Persistence
     {
         public CondominioContext(DbContextOptions o) : base(o) { }
 
-        public DbSet<Condominio> Condominios { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CondominioConstrutora>()
+                .HasKey(c => new { c.ConstrutoraId, c.CondominioId });
+            
+            //Configurar o relacionamento com o condominio
+            modelBuilder.Entity<CondominioConstrutora>()
+                .HasOne(c => c.Condominio)
+                .WithMany(c => c.CondominioConstrutoras)
+                .HasForeignKey(c => c.CondominioId);
+            
+            //Configurar o relacionamento com a construtora
+            modelBuilder.Entity<CondominioConstrutora>()
+                .HasOne(c => c.Construtora)
+                .WithMany(c => c.CondominioConstrutoras)
+                .HasForeignKey(c => c.ConstrutoraId);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+        public DbSet<Condominio> Condominios { get; set; }
+        public DbSet<Construtora> Construtoras { get; set; }
+        public DbSet<Sindico> Sindicos { get; set; }
+        public DbSet<Imovel> Imoveis { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿@model List<Condominio>
+
 @{
     ViewData["Title"] = "Listar";
 }
@@ -21,23 +22,27 @@
         <th>Tipo</th>
         <th>Ativo</th>
         <th>Opções</th>
+        <th>Nome do Sindico</th>
+        <th>Email do Sindico</th>
     </tr>
     @foreach (var itens in Model)
     {
-        <tr>
-            <td>@itens.CondominioId</td>
-            <td>@itens.Nome</td>
-            <td>@itens.Blocos</td>
-            <td>@itens.Tipo</td>
-            <td>@(itens.Ativo ? "Sim" : "Não")</td>
-            <td>
-                <a class="btn btn-sm btn-light" asp-action="Editar" asp-route-id="@itens.CondominioId">Editar</a>
-                <!-- Button trigger modal -->
-                <button onclick="codigo.value = @itens.CondominioId" type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
-                    Excluir
-                </button>
-            </td>
-        </tr>
+<tr>
+    <td>@itens.CondominioId</td>
+    <td>@itens.Nome</td>
+    <td>@itens.Blocos</td>
+    <td>@itens.Tipo</td>
+    <td>@(itens.Ativo ? "Sim" : "Não")</td>
+    <td>@itens.Sindico.Nome</td>
+    <td>@itens.Sindico.Email</td>
+    <td>
+        <a class="btn btn-sm btn-light" asp-action="Editar" asp-route-id="@itens.CondominioId">Editar</a>
+        <!-- Button trigger modal -->
+        <button onclick="codigo.value = @itens.CondominioId" type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
+            Excluir
+        </button>
+    </td>
+</tr>
     }
 
 </table>

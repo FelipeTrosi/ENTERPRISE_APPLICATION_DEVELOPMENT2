@@ -19,5 +19,10 @@ namespace _06_Fiap.Web.AspNet.Models
         public bool Ativo { get; set; }
         public Tipo Tipo { get; set; }
 
+        //Relacionamentos
+        public Sindico Sindico { get; set; }
+        public IList<Imovel> Imoveis { get; set; }
+        public IList<CondominioConstrutora> CondominioConstrutoras { get; set; }
+
     }
 }

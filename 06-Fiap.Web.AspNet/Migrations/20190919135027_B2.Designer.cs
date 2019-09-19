@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _06_Fiap.Web.AspNet.Persistence;
 
 namespace _06_Fiap.Web.AspNet.Migrations
 {
     [DbContext(typeof(CondominioContext))]
-    partial class CondominioContextModelSnapshot : ModelSnapshot
+    [Migration("20190919135027_B2")]
+    partial class B2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
