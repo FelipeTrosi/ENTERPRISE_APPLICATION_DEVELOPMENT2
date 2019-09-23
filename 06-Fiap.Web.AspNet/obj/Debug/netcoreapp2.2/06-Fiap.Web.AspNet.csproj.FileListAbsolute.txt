@@ -66,3 +66,5 @@ D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\06-Fiap.Web.AspNet\obj\Debug\netco
 D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\06-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Condominio\_formulario.g.cshtml.cs
 D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\06-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Imovel\Cadastrar.g.cshtml.cs
 D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\06-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Imovel\_formulario.g.cshtml.cs
+D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\06-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Imovel\Listar.g.cshtml.cs
+D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\06-Fiap.Web.AspNet\obj\Debug\netcoreapp2.2\Razor\Views\Imovel\Editar.g.cshtml.cs

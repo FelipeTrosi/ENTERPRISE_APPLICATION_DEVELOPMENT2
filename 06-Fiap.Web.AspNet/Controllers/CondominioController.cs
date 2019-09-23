@@ -65,6 +65,7 @@ namespace _06_Fiap.Web.AspNet.Controllers
             _context.Condominios.Update(condominio);
             _context.SaveChanges();
             TempData["mensagem"] = "Editado com sucesso";
+
             return RedirectToAction("Listar");
         }
 
@@ -90,6 +91,8 @@ namespace _06_Fiap.Web.AspNet.Controllers
                 .Include(c => c.Sindico).ToList();
             return View("Listar",lista);
         }    
+
+        //BUSCAR
 
     }
 }

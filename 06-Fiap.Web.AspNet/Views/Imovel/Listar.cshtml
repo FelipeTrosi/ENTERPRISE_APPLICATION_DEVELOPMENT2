@@ -1,0 +1,61 @@
+﻿@model List<Imovel>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<mensagem texto="@TempData["msg"]" ></mensagem>
+<h1>Listar</h1>
+<form asp-action="Listar" class="form-inline" method="get">
+    <select asp-items="@ViewBag.condominios" name="termoBusca" class="form-control">
+        <option>Selecione</option>
+    </select>
+    <input type="submit" value="Pesquisar" class="ml-2 btn btn-success">
+</form>
+
+<table class="table">
+    <tr>
+        <th>Numero</th>
+        <th>Área</th>
+        <th>Condominio</th>
+        <th>Opções</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Numero</td>
+            <td>@item.AreaUtil</td>
+            <td>@item.Condominio.Nome</td>
+            <td>
+                <a class="btn btn-sm btn-light" asp-action="Editar" asp-route-id="@item.ImovelId">Editar</a>
+                <button onclick="codigo.value = @item.ImovelId" type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
+                    Excluir
+                </button>
+            </td>
+
+        </tr>
+    }
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Deseja realmente excluir
+            </div>
+            <div class="modal-footer">
+                <form asp-action="Excluir">
+                    <input type="hidden" name="id" id="codigo" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                    <button type="submit" class="btn btn-primary">Sim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

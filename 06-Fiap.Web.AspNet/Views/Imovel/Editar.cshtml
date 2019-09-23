@@ -1,0 +1,11 @@
+﻿@model Imovel
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+<form asp-action="Editar" >
+    <input asp-for="ImovelId" type="hidden">
+    <partial name="_formulario" />
+    <botao texto="Editar" />
+</form>

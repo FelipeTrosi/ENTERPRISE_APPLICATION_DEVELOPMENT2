@@ -16,19 +16,19 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
+        
         <th>Nome</th>
         <th>Blocos</th>
         <th>Tipo</th>
         <th>Ativo</th>
-        <th>Opções</th>
         <th>Nome do Sindico</th>
         <th>Email do Sindico</th>
+        <th>Opções</th>
     </tr>
     @foreach (var itens in Model)
     {
 <tr>
-    <td>@itens.CondominioId</td>
+   
     <td>@itens.Nome</td>
     <td>@itens.Blocos</td>
     <td>@itens.Tipo</td>
@@ -41,6 +41,9 @@
         <button onclick="codigo.value = @itens.CondominioId" type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
             Excluir
         </button>
+       <a asp-controller="Imovel" asp-action="Listar" class="btn btn-sm btn-light" asp-route-termoBusca="@itens.CondominioId">Imoveis</a>
+
+
     </td>
 </tr>
     }
