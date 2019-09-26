@@ -1,0 +1,23 @@
+﻿@model  IList<Cela>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h1>Celas</h1>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Área</th>
+        <th>Quantidade Maxima</th>
+    </tr>
+    @foreach(var itens in Model)
+    {
+        <tr>
+            <td>@itens.Nome</td>
+            <td>@itens.Area</td>
+            <td>@itens.QuantidadeMaxima</td>
+        </tr>
+    }
+</table>
+
