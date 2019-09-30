@@ -1,0 +1,28 @@
+﻿@model IList<Presidiario>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h1>Celas</h1>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Data entrada</th>
+        <th>Data saída</th>
+        <th>Nivel escolaridade</th>
+        <th>Saida temporaria</th>
+        
+    </tr>
+    @foreach (var itens in Model)
+    {
+        <tr>
+            <td>@itens.Nome</td>
+            <td>@itens.DataEntrada</td>
+            <td>@itens.DataSaida</td>
+            <td>@itens.NivelEscolaridade</td>
+            <td>@itens.SaidaTemporaria</td>           
+        </tr>
+    }
+</table>
+
