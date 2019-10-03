@@ -14,6 +14,9 @@ namespace _07_Fiap.Web.AspNet.Repository
         void Remover(int codigo);
         IList<Presidiario> Listar();
         IList<Presidiario> BuscarPor(Expression<Func<Presidiario, bool>> filtro);
+
+        Presidiario BuscarPorCodigo(int id);
+        
         void Salvar();
     }
 }

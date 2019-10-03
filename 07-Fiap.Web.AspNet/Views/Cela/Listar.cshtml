@@ -10,6 +10,7 @@
         <th>Nome</th>
         <th>Área</th>
         <th>Quantidade Maxima</th>
+        <th>Opções</th>
     </tr>
     @foreach(var itens in Model)
     {
@@ -17,6 +18,12 @@
             <td>@itens.Nome</td>
             <td>@itens.Area</td>
             <td>@itens.QuantidadeMaxima</td>
+            <td>
+                <a asp-action="detalhar" 
+                   asp-route-codigo="@itens.CelaId" class="btn btn-primary">
+                    Detalhes
+                </a>
+            </td>
         </tr>
     }
 </table>

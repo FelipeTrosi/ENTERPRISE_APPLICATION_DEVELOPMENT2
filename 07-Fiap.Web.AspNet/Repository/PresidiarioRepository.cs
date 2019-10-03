@@ -33,6 +33,11 @@ namespace _07_Fiap.Web.AspNet.Repository
             _context.Presidiarios.Add(presidiario);
         }
 
+        public Presidiario BuscarPorCodigo(int id)
+        {
+            return _context.Presidiarios.Find(id);
+        }
+
         public IList<Presidiario> Listar()
         {
             return _context.Presidiarios.ToList();
