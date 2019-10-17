@@ -30,15 +30,32 @@ namespace _07_Fiap.Web.AspNet.Controllers
             var lista = _celaRepository.Listar();
             ViewBag.celas = new SelectList(lista, "CelaId", "Nome");
             return View();
+          
+        }
+
+        private void CarregarCelas()
+        {
+            var lista = _celaRepository.Listar();
+            ViewBag.celas = new SelectList(lista, "CelaId", "Nome");
         }
 
         [HttpPost]
         public IActionResult Cadastrar(Presidiario presidiario)
         {
-            _repository.Cadastrar(presidiario);
-            _repository.Salvar();
-            return RedirectToAction("Listar");
+            if (ModelState.IsValid)
+            {
+                _repository.Cadastrar(presidiario);
+                _repository.Salvar();
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                CarregarCelas();
+                return View();
+            }
+            
         }
+        
 
         //Listar
         [HttpGet]
@@ -51,7 +68,7 @@ namespace _07_Fiap.Web.AspNet.Controllers
         [HttpPost]
         public IActionResult DefinirSaida(int codigo)
         {
-            var presidiario = _repository.BuscarPorCodigo(codigo);
+             var presidiario = _repository.BuscarPorCodigo(codigo);
             presidiario.SaidaTemporaria = true;
             _repository.Atualizar(presidiario);
             _repository.Salvar();

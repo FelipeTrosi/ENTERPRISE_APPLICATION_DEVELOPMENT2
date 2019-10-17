@@ -32,10 +32,17 @@ namespace _07_Fiap.Web.AspNet.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Cela cela)
         {
-            _repository.Cadastrar(cela);
-            _repository.Salvar();           
-            TempData["msg"] = "Cadastrada com Sucesso ";
-            return RedirectToAction("Listar");
+            if (ModelState.IsValid)
+            {
+                _repository.Cadastrar(cela);
+                _repository.Salvar();
+                TempData["msg"] = "Cadastrada com Sucesso ";
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }            
         }
 
         //LISTAR
