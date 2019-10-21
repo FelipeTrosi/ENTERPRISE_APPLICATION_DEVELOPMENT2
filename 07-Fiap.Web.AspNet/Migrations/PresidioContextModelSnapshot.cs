@@ -27,7 +27,9 @@ namespace _07_Fiap.Web.AspNet.Migrations
 
                     b.Property<float>("Area");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
                     b.Property<int>("QuantidadeMaxima");
 
@@ -50,7 +52,9 @@ namespace _07_Fiap.Web.AspNet.Migrations
 
                     b.Property<int>("NivelEscolaridade");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100);
 
                     b.Property<bool>("SaidaTemporaria");
 
