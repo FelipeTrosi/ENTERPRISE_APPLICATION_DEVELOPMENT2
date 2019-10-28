@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Exercicio_PS.Models;
 using Exercicio_PS.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Exercicio_PS.Repository
 {
@@ -21,14 +22,27 @@ namespace Exercicio_PS.Repository
             _context.Jogos.Update(jogo);
         }
 
+        public Jogo Buscar(int codigo)
+        {
+            var jogo = _context.Jogos.Include(g => g.Genero)
+                                        .Where(g => g.JogoId == codigo)
+                                        .FirstOrDefault();
+            return jogo;
+        }
+
         public void Cadastrar(Jogo jogo)
         {
             _context.Jogos.Add(jogo);
         }
 
+        public void Commit()
+        {
+            _context.SaveChanges();            
+        }
+
         public IList<Jogo> Listar()
         {
-            var lista = _context.Jogos.ToList();
+            var lista = _context.Jogos.Include(g => g.Genero).ToList();
             return lista;
         }
 

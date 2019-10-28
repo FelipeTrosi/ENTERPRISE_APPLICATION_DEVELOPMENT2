@@ -1,0 +1,13 @@
+﻿@model  Jogo
+@{
+    ViewData["Title"] = "Atualizar";
+}
+
+<h1>Atualizar</h1>
+
+<form asp-action="Atualizar" asp-controller="Jogo">
+    <input type="hidden" asp-for="JogoId" />
+    <partial name="_formulario" />
+    <botao texto="Atualizar"></botao>
+    <a asp-action="Listar" class="btn btn-dark">Cancelar</a>
+</form>

@@ -29,3 +29,7 @@ D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2
 D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Exercicio_PS.pdb
 D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Exercicio_PS.csproj.CopyComplete
 D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Razor\Views\Jogo\Cadastrar.g.cshtml.cs
+D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Razor\Views\Genero\Cadastrar.g.cshtml.cs
+D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Razor\Views\Jogo\Listar.g.cshtml.cs
+D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Razor\Views\Jogo\_formulario.g.cshtml.cs
+D:\Thiago\ENTERPRISE_APPLICATION_DEVELOPMENT2\Exercicio_PS\obj\Debug\netcoreapp2.2\Razor\Views\Jogo\Atualizar.g.cshtml.cs

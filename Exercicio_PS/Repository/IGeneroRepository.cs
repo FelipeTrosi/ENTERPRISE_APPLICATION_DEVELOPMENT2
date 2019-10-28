@@ -12,5 +12,6 @@ namespace Exercicio_PS.Repository
         void Atualizar(Genero genero);
         void Remover(int id);
         IList<Genero> Listar();
+        void Commit();
     }
 }

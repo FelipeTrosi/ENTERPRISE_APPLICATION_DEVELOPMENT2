@@ -1,0 +1,24 @@
+﻿@model  IList<Jogo>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h1>Listar</h1>
+
+<table class="table">
+    <tr>
+        <th>Nome</th> 
+        <th>Gênero</th>
+        <th>Plataforma</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>@item.Nome</td>  
+        <td>@item.Genero.Nome</td>  
+        <td>@item.Plataforma</td>  
+        
+    </tr>
+    }
+
+</table>

@@ -11,6 +11,8 @@ namespace Exercicio_PS.Repository
         void Cadastrar(Jogo jogo);
         void Atualizar(Jogo jogo);
         void Remover(int codigo);
-        IList<Jogo> Listar(); 
+        IList<Jogo> Listar();
+        void Commit();
+        Jogo Buscar(int codigo);
     }
 }

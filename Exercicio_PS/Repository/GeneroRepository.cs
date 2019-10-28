@@ -25,6 +25,11 @@ namespace Exercicio_PS.Repository
             _context.Generos.Add(genero);
         }
 
+        public void Commit()
+        {
+            _context.SaveChanges();
+        }
+
         public IList<Genero> Listar()
         {
             var lista = _context.Generos.ToList();

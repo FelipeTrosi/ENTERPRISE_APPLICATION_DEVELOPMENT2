@@ -1,0 +1,15 @@
+﻿@model Genero
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+<h1>Cadastrar</h1>
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<form asp-action="Cadastrar" asp-controller="Genero">
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" />
+    </div>  
+    <botao texto="Cadastrar"></botao>    
+</form>
